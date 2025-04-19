@@ -1,11 +1,11 @@
-require('dotenv').config();
+
 const express = require('express');
 const bodyParser = require('body-parser');
 const axios = require('axios');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
-const SLACK_WEBHOOK_URL= process.env.SLACK_WEBHOOK_URL;
+const SLACK_WEBHOOK_URL= "https://hooks.slack.com/services/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";
 app.use(bodyParser.json());
 
 app.post('/github-webhook', async (req, res) => {
